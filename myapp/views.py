@@ -7,7 +7,6 @@ from django.contrib.auth  import login, logout,authenticate
 class employeeDetails(viewsets.ModelViewSet):
     queryset = employees.objects.all()
     serializer_class = employeeserializer
-    search_fields = ['Name','phone_number','address']
 
 def loggin(request):
     return render(request,'login.html')
